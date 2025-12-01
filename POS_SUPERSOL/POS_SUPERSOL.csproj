@@ -46,7 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CapaDatos\Cliente.cs" />
+    <Compile Include="CapaDatos\Class1.cs" />
+    <Compile Include="CapaEntidades\Cliente.cs" />
     <Compile Include="CapaPresentacion\frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>

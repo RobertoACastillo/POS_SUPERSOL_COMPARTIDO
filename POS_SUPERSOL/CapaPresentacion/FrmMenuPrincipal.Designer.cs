@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.btnProducto = new System.Windows.Forms.Button();
-            this.btnInventario = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
@@ -58,20 +57,10 @@
             this.btnProducto.Text = "Producto";
             this.btnProducto.UseVisualStyleBackColor = true;
             // 
-            // btnInventario
-            // 
-            this.btnInventario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventario.Location = new System.Drawing.Point(106, 122);
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(103, 35);
-            this.btnInventario.TabIndex = 1;
-            this.btnInventario.Text = "Inventario";
-            this.btnInventario.UseVisualStyleBackColor = true;
-            // 
             // btnVentas
             // 
             this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVentas.Location = new System.Drawing.Point(106, 163);
+            this.btnVentas.Location = new System.Drawing.Point(106, 130);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(103, 35);
             this.btnVentas.TabIndex = 2;
@@ -81,7 +70,7 @@
             // btnClientes
             // 
             this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.Location = new System.Drawing.Point(106, 204);
+            this.btnClientes.Location = new System.Drawing.Point(106, 171);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(103, 35);
             this.btnClientes.TabIndex = 3;
@@ -91,7 +80,7 @@
             // btnProveedores
             // 
             this.btnProveedores.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedores.Location = new System.Drawing.Point(106, 245);
+            this.btnProveedores.Location = new System.Drawing.Point(106, 212);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(115, 35);
             this.btnProveedores.TabIndex = 4;
@@ -111,7 +100,7 @@
             // btnCompras
             // 
             this.btnCompras.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompras.Location = new System.Drawing.Point(106, 286);
+            this.btnCompras.Location = new System.Drawing.Point(106, 253);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(103, 35);
             this.btnCompras.TabIndex = 6;
@@ -122,7 +111,7 @@
             // btnReportes
             // 
             this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.Location = new System.Drawing.Point(106, 327);
+            this.btnReportes.Location = new System.Drawing.Point(106, 294);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(103, 35);
             this.btnReportes.TabIndex = 7;
@@ -132,17 +121,18 @@
             // btnUsuarios
             // 
             this.btnUsuarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Location = new System.Drawing.Point(106, 368);
+            this.btnUsuarios.Location = new System.Drawing.Point(106, 335);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(103, 35);
             this.btnUsuarios.TabIndex = 8;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(106, 409);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(106, 376);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(103, 35);
             this.btnCerrarSesion.TabIndex = 9;
@@ -216,7 +206,6 @@
             this.Controls.Add(this.btnProveedores);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnVentas);
-            this.Controls.Add(this.btnInventario);
             this.Controls.Add(this.btnProducto);
             this.Name = "FrmMenuPrincipal";
             this.Text = "FrmMenuPrincipal";
@@ -231,7 +220,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnProducto;
-        private System.Windows.Forms.Button btnInventario;
         private System.Windows.Forms.Button btnVentas;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnProveedores;

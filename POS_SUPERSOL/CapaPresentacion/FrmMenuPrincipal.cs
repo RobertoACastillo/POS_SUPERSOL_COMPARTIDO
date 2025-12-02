@@ -64,5 +64,24 @@ namespace POS_SUPERSOL.CapaPresentacion
             frm.ShowDialog();
 
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            SesionActual.Cerrar();
+            this.Close();
+            frmInicioSesion  frm= new frmInicioSesion();
+            frm.ShowDialog();
+        }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            frmProductos frm = new frmProductos();
+            frm.ShowDialog();
+        }
     }
 }

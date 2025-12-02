@@ -47,11 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapaDatos\Conexion.cs" />
+    <Compile Include="CapaDatos\ProductoDal.cs" />
     <Compile Include="CapaDatos\Seguridad.cs" />
     <Compile Include="CapaDatos\SesionActual.cs" />
     <Compile Include="CapaDatos\UsuarioDAL.cs" />
     <Compile Include="CapaEntidades\Cliente.cs" />
+    <Compile Include="CapaEntidades\Producto.cs" />
     <Compile Include="CapaEntidades\Usuario.cs" />
+    <Compile Include="CapaNegocios\ProductoBLL.cs" />
     <Compile Include="CapaNegocios\UsuarioBLL.cs" />
     <Compile Include="CapaPresentacion\djdudyegf.cs">
       <SubType>Form</SubType>
@@ -100,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace POS_SUPERSOL.CapaDatos
 {
-    internal class Class1
+    public class Conexion
     {
+        public static string Cadena = @"Data Source=DESKTOP-GLJR0B3\SQLEXPRESS; Initial Catalog=SUPERSOL_POS;Integrated Security=True;";
     }
 }

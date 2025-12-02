@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using POS_SUPERSOL.CapaPresentacion
+using POS_SUPERSOL.CapaPresentacion;
 
 namespace POS_SUPERSOL
 {

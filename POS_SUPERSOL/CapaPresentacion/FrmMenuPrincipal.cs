@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using POS_SUPERSOL.CapaDatos;
 
 namespace POS_SUPERSOL.CapaPresentacion
 {
@@ -29,7 +30,7 @@ namespace POS_SUPERSOL.CapaPresentacion
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
-
+            lblUsuario.Text = $"Usuario: {SesionActual.NombreUsuario} - Rol: {SesionActual.Rol}";
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.btnCerrarSecion = new System.Windows.Forms.Button();
+            this.txtClave = new System.Windows.Forms.TextBox();
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -63,22 +63,23 @@
             this.txtUsuario.Size = new System.Drawing.Size(293, 20);
             this.txtUsuario.TabIndex = 2;
             // 
-            // txtContrasena
+            // txtClave
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(284, 183);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(293, 20);
-            this.txtContrasena.TabIndex = 3;
+            this.txtClave.Location = new System.Drawing.Point(284, 183);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(293, 20);
+            this.txtClave.TabIndex = 3;
             // 
-            // btnCerrarSecion
+            // btnIniciarSesion
             // 
-            this.btnCerrarSecion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSecion.Location = new System.Drawing.Point(198, 337);
-            this.btnCerrarSecion.Name = "btnCerrarSecion";
-            this.btnCerrarSecion.Size = new System.Drawing.Size(144, 33);
-            this.btnCerrarSecion.TabIndex = 4;
-            this.btnCerrarSecion.Text = "Cerrar Secion";
-            this.btnCerrarSecion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.Location = new System.Drawing.Point(198, 337);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(144, 33);
+            this.btnIniciarSesion.TabIndex = 4;
+            this.btnIniciarSesion.Text = "Iniciar Sesion";
+            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // btnSalir
             // 
@@ -96,8 +97,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnCerrarSecion);
-            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.btnIniciarSesion);
+            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -114,8 +115,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.Button btnCerrarSecion;
+        private System.Windows.Forms.TextBox txtClave;
+        private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnSalir;
     }
 }

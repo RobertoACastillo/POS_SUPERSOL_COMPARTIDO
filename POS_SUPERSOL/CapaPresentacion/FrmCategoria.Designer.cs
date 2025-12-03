@@ -73,6 +73,7 @@
             // 
             // dgvCategoria
             // 
+            this.dgvCategoria.AllowUserToAddRows = false;
             this.dgvCategoria.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategoria.Location = new System.Drawing.Point(68, 123);

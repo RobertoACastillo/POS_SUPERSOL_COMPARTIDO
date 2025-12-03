@@ -50,7 +50,7 @@
     <Compile Include="CapaDatos\Conexion.cs" />
     <Compile Include="CapaDatos\ProductoDal.cs" />
     <Compile Include="CapaDatos\Seguridad.cs" />
-    <Compile Include="CapaDatos\SesionActual.cs" />
+    <Compile Include="CapaEntidades\SesionActual.cs" />
     <Compile Include="CapaDatos\UsuarioDAL.cs" />
     <Compile Include="CapaEntidades\Categoria.cs" />
     <Compile Include="CapaEntidades\Cliente.cs" />
@@ -101,6 +101,12 @@
     <Compile Include="CapaPresentacion\frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaPresentacion\FrmRegistrarVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmRegistrarVentas.Designer.cs">
+      <DependentUpon>FrmRegistrarVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapaPresentacion\FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="prueba\prueba.cs" />
+    <Compile Include="CapaDatos\ClienteDAL.cs" />
+    <Compile Include="CapaEntidades\DetalleVenta.cs" />
+    <Compile Include="CapaDatos\TipoPagoDAL.cs" />
+    <Compile Include="CapaNegocios\VentaBLL.cs" />
+    <Compile Include="CapaDatos\VentaDAL.cs" />
+    <Compile Include="CapaEntidades\RespuestaOperacion.cs" />
+    <Compile Include="CapaEntidades\TipoPago.cs" />
+    <Compile Include="CapaEntidades\Venta.cs" />
     <EmbeddedResource Include="CapaPresentacion\FrmCambiarClave.resx">
       <DependentUpon>FrmCambiarClave.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmRegistrarVentas.resx">
+      <DependentUpon>FrmRegistrarVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>

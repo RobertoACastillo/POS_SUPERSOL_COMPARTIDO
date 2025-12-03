@@ -126,7 +126,13 @@ namespace POS_SUPERSOL.CapaPresentacion
 
         public void btnNuevo_Click(object sender, EventArgs e)
         {
-          
+            FrmCambiarClave frm = new FrmCambiarClave();
+            frm.ShowDialog();
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

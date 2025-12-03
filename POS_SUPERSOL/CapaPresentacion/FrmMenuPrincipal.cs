@@ -42,7 +42,7 @@ namespace POS_SUPERSOL.CapaPresentacion
                     break;
                 case "Cajero":
                     btnClientes.Enabled = false;
-                    btnUsuarios.Enabled = false;
+                    btnUsuarios.Enabled = true;
                     break;
                 default:
                     btnClientes.Enabled = false;
@@ -87,6 +87,12 @@ namespace POS_SUPERSOL.CapaPresentacion
         private void btnCategoria_Click(object sender, EventArgs e)
         {
             FrmCategoria frm = new FrmCategoria();
+            frm.ShowDialog();
+        }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarVentas frm = new FrmRegistrarVentas();
             frm.ShowDialog();
         }
     }

@@ -8,6 +8,6 @@ namespace POS_SUPERSOL.CapaDatos
 {
     public class Conexion
     {
-        public static string Cadena = @"Data Source=SARAI\SQLEXPRESS1; Initial Catalog=SUPERSOL_POS;Integrated Security=True;";
+        public static string Cadena = @"Data Source=DESKTOP-GLJR0B3\SQLEXPRESS; Initial Catalog=SUPERSOL_POS2;Integrated Security=True;";
     }
 }

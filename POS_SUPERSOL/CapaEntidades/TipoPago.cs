@@ -6,18 +6,9 @@ using System.Threading.Tasks;
 
 namespace POS_SUPERSOL.CapaEntidades
 {
-    public class Cliente
+    public class TipoPago
     {
         public int Id { get; set; }
-
         public string Nombre { get; set; }
-
-        public string Correo { get; set; }
-
-        public string Dui { get; set; }
-
-        public string Telefono { get; set; }
-
-        public bool Estado { get; set; }
     }
 }

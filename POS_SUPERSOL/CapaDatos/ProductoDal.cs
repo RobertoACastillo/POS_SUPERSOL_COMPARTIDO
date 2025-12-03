@@ -16,7 +16,13 @@ namespace POS_SUPERSOL.CapaDatos
             using (SqlConnection cn = new SqlConnection(Conexion.Cadena))
             {
                 SqlDataAdapter da = new SqlDataAdapter(
-                    "SELECT * FROM Producto", cn);
+                    "SELECT P.Id, P.Nombre, P.Precio, P.Stock, P.Estado, " +
+                    "C.Nombre AS Categoria, PV.Nombre AS Proveedor " +
+                    "FROM Producto P " +
+                    "INNER JOIN Categoria C ON P.Id_Categoria = C.Id " +
+                    "LEFT JOIN Proveedor PV ON P.Id_Proveedor = PV.Id;",
+                    cn
+                );
 
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -81,6 +87,27 @@ namespace POS_SUPERSOL.CapaDatos
 
                 cn.Open();
                 cmd.ExecuteNonQuery();
+            }
+        }
+        public static int ObtenerStock(int idProducto)
+        {
+            int stock = 0;
+
+            using (SqlConnection con = new SqlConnection(Conexion.Cadena))
+            {
+                string sql = "SELECT Stock FROM Producto WHERE Id = @Id";
+
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", idProducto);
+
+                    con.Open();
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null)
+                        stock = Convert.ToInt32(result);
+                }
+                return stock;
             }
         }
     }

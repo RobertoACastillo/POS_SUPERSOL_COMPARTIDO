@@ -46,27 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapaDatos\CategoriaDAL.cs" />
     <Compile Include="CapaDatos\Conexion.cs" />
     <Compile Include="CapaDatos\ProductoDal.cs" />
     <Compile Include="CapaDatos\Seguridad.cs" />
     <Compile Include="CapaDatos\SesionActual.cs" />
     <Compile Include="CapaDatos\UsuarioDAL.cs" />
+    <Compile Include="CapaEntidades\Categoria.cs" />
     <Compile Include="CapaEntidades\Cliente.cs" />
     <Compile Include="CapaEntidades\Producto.cs" />
     <Compile Include="CapaEntidades\Usuario.cs" />
+    <Compile Include="CapaNegocios\CategoriaBLL.cs" />
     <Compile Include="CapaNegocios\ProductoBLL.cs" />
     <Compile Include="CapaNegocios\UsuarioBLL.cs" />
-    <Compile Include="CapaPresentacion\djdudyegf.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CapaPresentacion\djdudyegf.Designer.cs">
-      <DependentUpon>djdudyegf.cs</DependentUpon>
-    </Compile>
     <Compile Include="CapaPresentacion\FrmCambiarClave.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CapaPresentacion\FrmCambiarClave.Designer.cs">
       <DependentUpon>FrmCambiarClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoriaGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCategoriaGestion.Designer.cs">
+      <DependentUpon>FrmCategoriaGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmEliminarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmEliminarCategoria.Designer.cs">
+      <DependentUpon>FrmEliminarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\frmInicioSesion.cs">
       <SubType>Form</SubType>
@@ -97,6 +112,15 @@
     <Compile Include="prueba\prueba.cs" />
     <EmbeddedResource Include="CapaPresentacion\FrmCambiarClave.resx">
       <DependentUpon>FrmCambiarClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmCategoriaGestion.resx">
+      <DependentUpon>FrmCategoriaGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmEliminarCategoria.resx">
+      <DependentUpon>FrmEliminarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>

@@ -96,6 +96,7 @@
             this.btnCategoria.TabIndex = 5;
             this.btnCategoria.Text = "Categoria";
             this.btnCategoria.UseVisualStyleBackColor = true;
+            this.btnCategoria.Click += new System.EventHandler(this.btnCategoria_Click);
             // 
             // btnReportes
             // 

@@ -83,5 +83,11 @@ namespace POS_SUPERSOL.CapaPresentacion
             frmProductos frm = new frmProductos();
             frm.ShowDialog();
         }
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            FrmCategoria frm = new FrmCategoria();
+            frm.ShowDialog();
+        }
     }
 }

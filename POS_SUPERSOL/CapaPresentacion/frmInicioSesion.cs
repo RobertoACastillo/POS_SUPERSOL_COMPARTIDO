@@ -53,5 +53,11 @@ namespace POS_SUPERSOL.CapaPresentacion
             }
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+
+        }
     }
 }

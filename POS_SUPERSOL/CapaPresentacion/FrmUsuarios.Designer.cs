@@ -191,11 +191,11 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(16, 427);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 445);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(273, 35);
+            this.btnNuevo.Size = new System.Drawing.Size(359, 35);
             this.btnNuevo.TabIndex = 16;
-            this.btnNuevo.Text = "Cambiar cotraseña";
+            this.btnNuevo.Text = "Cambiar cotraseña de usuario actual";
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 

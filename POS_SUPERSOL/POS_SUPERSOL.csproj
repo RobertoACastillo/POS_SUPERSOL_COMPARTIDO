@@ -49,7 +49,9 @@
     <Compile Include="CapaDatos\CategoriaDAL.cs" />
     <Compile Include="CapaDatos\Conexion.cs" />
     <Compile Include="CapaDatos\ProductoDal.cs" />
+    <Compile Include="CapaDatos\ProveedorDAL.cs" />
     <Compile Include="CapaDatos\Seguridad.cs" />
+    <Compile Include="CapaEntidades\Proveedor.cs" />
     <Compile Include="CapaEntidades\SesionActual.cs" />
     <Compile Include="CapaDatos\UsuarioDAL.cs" />
     <Compile Include="CapaEntidades\Categoria.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="CapaEntidades\Usuario.cs" />
     <Compile Include="CapaNegocios\CategoriaBLL.cs" />
     <Compile Include="CapaNegocios\ProductoBLL.cs" />
+    <Compile Include="CapaNegocios\ProveedorBLL.cs" />
     <Compile Include="CapaNegocios\UsuarioBLL.cs" />
     <Compile Include="CapaPresentacion\FrmCambiarClave.cs">
       <SubType>Form</SubType>
@@ -100,6 +103,12 @@
     </Compile>
     <Compile Include="CapaPresentacion\frmProductos.Designer.cs">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmProveedores.Designer.cs">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="CapaPresentacion\FrmRegistrarVentas.cs">
       <SubType>Form</SubType>
@@ -144,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\frmProductos.resx">
       <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\FrmProveedores.resx">
+      <DependentUpon>FrmProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapaPresentacion\FrmRegistrarVentas.resx">
       <DependentUpon>FrmRegistrarVentas.cs</DependentUpon>

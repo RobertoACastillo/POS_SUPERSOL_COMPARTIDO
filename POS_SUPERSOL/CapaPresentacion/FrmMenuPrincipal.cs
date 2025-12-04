@@ -95,5 +95,11 @@ namespace POS_SUPERSOL.CapaPresentacion
             FrmRegistrarVentas frm = new FrmRegistrarVentas();
             frm.ShowDialog();
         }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            FrmProveedores frm = new FrmProveedores();
+            frm.ShowDialog();
+        }
     }
 }

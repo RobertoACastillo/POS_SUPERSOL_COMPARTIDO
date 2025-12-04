@@ -59,6 +59,7 @@
     <Compile Include="CapaEntidades\Producto.cs" />
     <Compile Include="CapaEntidades\Usuario.cs" />
     <Compile Include="CapaNegocios\CategoriaBLL.cs" />
+    <Compile Include="CapaNegocios\ClienteBLL.cs" />
     <Compile Include="CapaNegocios\ProductoBLL.cs" />
     <Compile Include="CapaNegocios\ProveedorBLL.cs" />
     <Compile Include="CapaNegocios\UsuarioBLL.cs" />
@@ -133,6 +134,12 @@
     <Compile Include="CapaEntidades\RespuestaOperacion.cs" />
     <Compile Include="CapaEntidades\TipoPago.cs" />
     <Compile Include="CapaEntidades\Venta.cs" />
+    <Compile Include="CapaPresentacion\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CapaPresentacion\FrmCambiarClave.resx">
       <DependentUpon>FrmCambiarClave.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +179,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapaPresentacion\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -185,6 +195,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="temporal\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

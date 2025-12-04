@@ -165,5 +165,10 @@ namespace POS_SUPERSOL.CapaPresentacion
             Limpiar();
             MessageBox.Show("Campos limpiados.", "Limpieza completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

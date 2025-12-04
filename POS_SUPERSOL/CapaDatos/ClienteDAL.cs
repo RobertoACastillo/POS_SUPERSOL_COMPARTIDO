@@ -11,130 +11,108 @@ namespace POS_SUPERSOL.CapaDatos
 {
     public class ClienteDAL
     {
-            public DataTable Listar()
-
+        public DataTable Listar()
         {
-
-
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable();//tabla en memoria
             using (SqlConnection cn = new SqlConnection(Conexion.Cadena))
-
+            //SQLConnection: representa la conexión a una base de datos SQL
+            ////Server usando la cadena de conexion
             {
-
-                string sql = "SELECT Id, Nombre, Dui, Telefono, Correo, Estado from Cliente";
-                //Consulta SQL que devuelve todos los registros de la tabla cliente
+                string sql = "SELECT Id, Nombre, Telefono, Correo,Dui, Estado from Cliente";
+                //Consulta SQL que devuelve todos los registros de la tabla Cliente
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
-                //sqlCommand: Prepara el comando sql que se enviara al servidor
-                //Sever usando la cadena de conexion
+                //SqlCommand: prepara el comando SQL que se enviara al servidor
                 {
-
-                    cn.Open(); //Abre la conexion
+                    cn.Open();//abre la conexion
                     new SqlDataAdapter(cmd).Fill(dt);
                     //SqlDataAdapter: Ejecuta el SELECT y llena el DataTable con los resultados
-
                 }
-
             }
-
-            return dt;//Retorna la tabla con los datos
+            return dt;//retorna la tabla con los datos
         }
 
         public int Insertar(Cliente c)
         {
             using (SqlConnection cn = new SqlConnection(Conexion.Cadena))
             {
-                string sql = @"INSERT INTO Cliente(Nombre, Dui, Telefono, Correo, Estado) VALUES (@nombre, @dui,@telefono,@correo,@estado); SELECT SCOPE_IDENTITY();";
-                //string sql = @"INSERT INTO Cliente(Nombre, Dui, Telefono, Correo, Estado) VALUES (@nombre, @dui,@telefono,@correo,@estado); SELECT SCOPE_IDENTITY();";
+                string sql = @"INSERT INTO Cliente (Nombre, Telefono, Correo,Dui, Estado)
+               VALUES (@Nombre, @Telefono,@Correo, @Dui, @Estado);
+               SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
-
-                    cmd.Parameters.AddWithValue("@id", c.Id);
-                    cmd.Parameters.AddWithValue("@nombre", c.Nombre);
-                    cmd.Parameters.AddWithValue("@dui", c.Dui);
-                    cmd.Parameters.AddWithValue("@telefono", c.Telefono);
-                    cmd.Parameters.AddWithValue("@correo", c.Correo);
-                    cmd.Parameters.AddWithValue("@estado", c.Estado);
+                    cmd.Parameters.AddWithValue("@Nombre", c.Nombre);
+                    cmd.Parameters.AddWithValue("@Dui", c.Dui);
+                    cmd.Parameters.AddWithValue("@Telefono", c.Telefono);
+                    cmd.Parameters.AddWithValue("@Correo", c.Correo);
+                    cmd.Parameters.AddWithValue("@Estado", c.Estado);
                     cn.Open();
+                    //ExecuteScalar: Ejecuta el comando y devuelve el primer
+                    ////valor de la primera fila del conjunto de resultados(el ID)
                     return Convert.ToInt32(cmd.ExecuteScalar());
-
                 }
-
             }
-
         }
 
-
         public bool Actualizar(Cliente c)
-
         {
-
             using (SqlConnection cn = new SqlConnection(Conexion.Cadena))
             {
-                string sql = @"UPDATE Cliente SET Nombre=@nombre, Dui=@dui, Telefono=@telefono, Correo=@correo, Estado=@estado WHERE Id=@id";
+                string sql = @"UPDATE Cliente SET Nombre=@nombre, Dui=@dui,
+                            Telefono=@telefono, Correo=@correo, Estado=@estado
+                            WHERE Id=@id";
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
-
+                    cmd.Parameters.AddWithValue("@id", c.Id);
                     cmd.Parameters.AddWithValue("@nombre", c.Nombre);
-                    cmd.Parameters.AddWithValue("@dui", c.Dui);
                     cmd.Parameters.AddWithValue("@telefono", c.Telefono);
                     cmd.Parameters.AddWithValue("@correo", c.Correo);
+                    cmd.Parameters.AddWithValue("@dui", c.Dui);
                     cmd.Parameters.AddWithValue("@estado", c.Estado);
 
                     cn.Open();
                     return cmd.ExecuteNonQuery() > 0;
-
+                    //ExecuteNonQuery(): devulve el numero de filas afectadas
+                    //>0 significa que se actualizo al menos una fila
                 }
-
             }
-
-
         }
-
         public bool Eliminar(int id)
-
         {
-
             using (SqlConnection cn = new SqlConnection(Conexion.Cadena))
             {
-
-                String sql = "DELETE FROM Cliente WHERE Id=@id";
+                string sql = "DELETE FROM Cliente WHERE Id=@id";
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
-
                     cmd.Parameters.AddWithValue("@id", id);
                     cn.Open();
                     return cmd.ExecuteNonQuery() > 0;
+                    //Elimina y devuelve true si se elimino al menos una fila
                 }
-
             }
         }
-
         public DataTable Buscar(string filtro)
         {
             DataTable dt = new DataTable();
             using (SqlConnection cn = new SqlConnection(Conexion.Cadena))
-
             {
+                string sql = @"SELECT Id, Nombre, Telefono, Correo, Dui, Estado
+               FROM Cliente
+               WHERE Nombre LIKE @filtro OR Telefono LIKE @filtro";
 
-                string sql = @"SELECT Id, Nombre, Telefono, Dui, Correo, Estado FROM Cliente WHERE Nombre LIKE @filtro OR Telefono LIKE @filtro";
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
-
                 {
-
-                    cmd.Parameters.AddWithValue("@filtro", "%" + filtro + "%" + "%");
+                    cmd.Parameters.AddWithValue("@filtro", "%" + filtro + "%");
                     cn.Open();
                     new SqlDataAdapter(cmd).Fill(dt);
-
+                    //Llena el DataTable con los resultados de la busqueda
                 }
-
             }
-
             return dt;
         }
 
 
-
+        // Este método sirve para llenar el ComboBox de clientes.
         public static List<Cliente> ListarActivos()
         {
             List<Cliente> lista = new List<Cliente>();
@@ -163,12 +141,13 @@ namespace POS_SUPERSOL.CapaDatos
                     }
                 }
             }
-
             return lista;
+
+
+
         }
+
     }
 }
-
-
-
-
+    
+    

@@ -17,10 +17,9 @@ namespace POS_SUPERSOL.CapaDatos
             {
                 SqlDataAdapter da = new SqlDataAdapter(
                     "SELECT P.Id, P.Nombre, P.Precio, P.Stock, P.Estado, " +
-                    "C.Nombre AS Categoria, PV.Nombre AS Proveedor " +
-                    "FROM Producto P " +
-                    "INNER JOIN Categoria C ON P.Id_Categoria = C.Id " +
-                    "LEFT JOIN Proveedor PV ON P.Id_Proveedor = PV.Id;",
+"P.Id_Categoria, C.Nombre AS Categoria " +  
+"FROM Producto P " +
+"INNER JOIN Categoria C ON P.Id_Categoria = C.Id",
                     cn
                 );
 

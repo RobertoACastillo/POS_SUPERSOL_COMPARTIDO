@@ -54,12 +54,13 @@
             // 
             this.dgvProveedores.AllowUserToAddRows = false;
             this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProveedores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProveedores.Location = new System.Drawing.Point(491, 52);
+            this.dgvProveedores.Location = new System.Drawing.Point(480, 84);
             this.dgvProveedores.Margin = new System.Windows.Forms.Padding(6);
             this.dgvProveedores.Name = "dgvProveedores";
             this.dgvProveedores.ReadOnly = true;
-            this.dgvProveedores.Size = new System.Drawing.Size(708, 436);
+            this.dgvProveedores.Size = new System.Drawing.Size(698, 404);
             this.dgvProveedores.TabIndex = 0;
             this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
             this.dgvProveedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellContentClick);
@@ -95,6 +96,7 @@
             // 
             // txtProductoSuministrado
             // 
+            this.txtProductoSuministrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtProductoSuministrado.Location = new System.Drawing.Point(148, 255);
             this.txtProductoSuministrado.Name = "txtProductoSuministrado";
             this.txtProductoSuministrado.Size = new System.Drawing.Size(301, 33);
@@ -102,6 +104,7 @@
             // 
             // txtDireccion
             // 
+            this.txtDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtDireccion.Location = new System.Drawing.Point(148, 186);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(301, 33);
@@ -109,13 +112,16 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtTelefono.Location = new System.Drawing.Point(148, 139);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(301, 33);
             this.txtTelefono.TabIndex = 10;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtNombre.Location = new System.Drawing.Point(148, 90);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(301, 33);
@@ -169,6 +175,7 @@
             // 
             // txtIdProveedor
             // 
+            this.txtIdProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtIdProveedor.Location = new System.Drawing.Point(67, 32);
             this.txtIdProveedor.Name = "txtIdProveedor";
             this.txtIdProveedor.ReadOnly = true;
@@ -177,59 +184,64 @@
             // 
             // btnAgregarProveedor
             // 
-            this.btnAgregarProveedor.Location = new System.Drawing.Point(15, 383);
+            this.btnAgregarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAgregarProveedor.Location = new System.Drawing.Point(35, 383);
             this.btnAgregarProveedor.Name = "btnAgregarProveedor";
             this.btnAgregarProveedor.Size = new System.Drawing.Size(160, 36);
             this.btnAgregarProveedor.TabIndex = 3;
             this.btnAgregarProveedor.Text = "Agregar";
-            this.btnAgregarProveedor.UseVisualStyleBackColor = true;
+            this.btnAgregarProveedor.UseVisualStyleBackColor = false;
             this.btnAgregarProveedor.Click += new System.EventHandler(this.btnAgregarProveedor_Click);
             // 
             // btnModificarProveedor
             // 
+            this.btnModificarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnModificarProveedor.Location = new System.Drawing.Point(260, 383);
             this.btnModificarProveedor.Name = "btnModificarProveedor";
             this.btnModificarProveedor.Size = new System.Drawing.Size(156, 36);
             this.btnModificarProveedor.TabIndex = 4;
             this.btnModificarProveedor.Text = "Modificar";
-            this.btnModificarProveedor.UseVisualStyleBackColor = true;
+            this.btnModificarProveedor.UseVisualStyleBackColor = false;
             this.btnModificarProveedor.Click += new System.EventHandler(this.btnModificarProveedor_Click);
             // 
             // btnEliminarProveedor
             // 
+            this.btnEliminarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnEliminarProveedor.Location = new System.Drawing.Point(15, 452);
             this.btnEliminarProveedor.Name = "btnEliminarProveedor";
             this.btnEliminarProveedor.Size = new System.Drawing.Size(160, 36);
             this.btnEliminarProveedor.TabIndex = 5;
             this.btnEliminarProveedor.Text = "Eliminar";
-            this.btnEliminarProveedor.UseVisualStyleBackColor = true;
+            this.btnEliminarProveedor.UseVisualStyleBackColor = false;
             this.btnEliminarProveedor.Click += new System.EventHandler(this.btnEliminarProveedor_Click);
             // 
             // btnLimpiarProveedor
             // 
+            this.btnLimpiarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLimpiarProveedor.Location = new System.Drawing.Point(256, 452);
             this.btnLimpiarProveedor.Name = "btnLimpiarProveedor";
             this.btnLimpiarProveedor.Size = new System.Drawing.Size(160, 36);
             this.btnLimpiarProveedor.TabIndex = 6;
             this.btnLimpiarProveedor.Text = "Limpiar";
-            this.btnLimpiarProveedor.UseVisualStyleBackColor = true;
+            this.btnLimpiarProveedor.UseVisualStyleBackColor = false;
             this.btnLimpiarProveedor.Click += new System.EventHandler(this.btnLimpiarProveedor_Click);
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCerrar.Location = new System.Drawing.Point(15, 3);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(156, 36);
             this.btnCerrar.TabIndex = 7;
             this.btnCerrar.Text = "Cerrar";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1205, 503);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnLimpiarProveedor);

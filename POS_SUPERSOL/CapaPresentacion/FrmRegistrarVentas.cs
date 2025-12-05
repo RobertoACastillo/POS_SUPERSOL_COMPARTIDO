@@ -401,6 +401,21 @@ namespace POS_SUPERSOL.CapaPresentacion
         {
             this.Close();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboTipoPago_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

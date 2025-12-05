@@ -59,37 +59,39 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(131, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 21);
+            this.label2.Size = new System.Drawing.Size(194, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Seleccione una fecha";
+            this.label2.Text = "SELECIONE UNA FECHA";
             // 
             // btnGenerar
             // 
+            this.btnGenerar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnGenerar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerar.Location = new System.Drawing.Point(187, 243);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(222, 64);
             this.btnGenerar.TabIndex = 3;
             this.btnGenerar.Text = "GENERAR PDF";
-            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Location = new System.Drawing.Point(500, 243);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(222, 64);
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "CERRAR";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmReporteDiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(904, 404);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnGenerar);
@@ -97,7 +99,7 @@
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmReporteDiario";
             this.Text = "frmReporteDiario";
             this.ResumeLayout(false);

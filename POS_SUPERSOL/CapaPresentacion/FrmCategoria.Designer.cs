@@ -74,7 +74,7 @@
             // dgvCategoria
             // 
             this.dgvCategoria.AllowUserToAddRows = false;
-            this.dgvCategoria.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvCategoria.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategoria.Location = new System.Drawing.Point(68, 123);
             this.dgvCategoria.Name = "dgvCategoria";
@@ -84,6 +84,7 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.txtBuscar.Location = new System.Drawing.Point(152, 69);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(496, 20);

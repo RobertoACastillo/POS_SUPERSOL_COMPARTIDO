@@ -22,10 +22,22 @@ namespace POS_SUPERSOL.CapaPresentacion
             InitializeComponent();
         }
 
+        private void LlenarComboCategoria()
+        {
+            CategoriaBLL categoriaBLL = new CategoriaBLL();
+            DataTable dt = categoriaBLL.Listar();
+
+            cboCategoria.DataSource = dt;
+            cboCategoria.DisplayMember = "Nombre";   // Lo que se ve
+            cboCategoria.ValueMember = "Id";         // Lo que se guarda
+            cboCategoria.SelectedIndex = -1;         // Nada seleccionado al inicio
+        }
+
         private void frmProductos_Load(object sender, EventArgs e)
         {
             dgvProductos.DataSource = ProductoBLL.Mostrar();
-           
+            LlenarComboCategoria();
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -74,9 +86,10 @@ namespace POS_SUPERSOL.CapaPresentacion
                 Nombre = txtNombre.Text.Trim(),
                 Precio = precio,
                 Stock = stock,
-                Id_Categoria = 1,
+                Id_Categoria = Convert.ToInt32(cboCategoria.SelectedValue),
                 Id_Proveedor = 1
             };
+
 
             ProductoBLL.Insertar(p);
             MessageBox.Show("Producto agregado correctamente.", "Éxito",
@@ -134,7 +147,7 @@ namespace POS_SUPERSOL.CapaPresentacion
                 Nombre = txtNombre.Text.Trim(),
                 Precio = precio,
                 Stock = stock,
-                Id_Categoria = 1,
+                Id_Categoria = Convert.ToInt32(cboCategoria.SelectedValue),
                 Id_Proveedor = 1
             };
 
@@ -201,13 +214,21 @@ namespace POS_SUPERSOL.CapaPresentacion
                 txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
                 txtPrecio.Text = fila.Cells["Precio"].Value.ToString();
                 txtStock.Text = fila.Cells["Stock"].Value.ToString();
-                
+                cboCategoria.SelectedValue = fila.Cells["Id_Categoria"].Value;
+
+
+
             }
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+
+        }
+
+        private void cboCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
